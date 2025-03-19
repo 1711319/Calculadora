@@ -1,6 +1,6 @@
 # Calculadora
  Calculadora simples 
-📊 Calculadora em Java Form Bem-vindo ao projeto Calculadora em Java, um programa simples e eficiente que combina funcionalidade com uma interface amigável. Criado para propósitos educacionais, este projeto é ideal para aprender os fundamentos de programação e desenvolvimento de interfaces gráficas.
+📊 Calculadora em Java JForm Bem-vindo ao projeto Calculadora em Java, um programa simples e eficiente que combina funcionalidade com uma interface amigável. Criado para propósitos educacionais, este projeto é ideal para aprender os fundamentos de programação e desenvolvimento de interfaces gráficas.
 
 ✨ Funcionalidades Principais 🧮 Operações Básicas: Adição, subtração, multiplicação e divisão.
 
