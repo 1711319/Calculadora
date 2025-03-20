@@ -21,6 +21,8 @@ public class Visual extends javax.swing.JFrame {
         this.getContentPane().setBackground(new Color(128, 128, 128));
         initComponents();
     }
+    // Inicialize o botão com o estado desligado
+    private boolean ON = false;
 
     double num1, num2, resultado;
     String contas;
@@ -60,6 +62,7 @@ public class Visual extends javax.swing.JFrame {
         setTitle("Calculadora");
         setBackground(new java.awt.Color(102, 102, 102));
         setForeground(java.awt.Color.white);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(335, 505));
         setResizable(false);
 
@@ -280,8 +283,9 @@ public class Visual extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addComponent(jTFCalc, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(BTN_Voltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -323,18 +327,14 @@ public class Visual extends javax.swing.JFrame {
                         .addComponent(BTN_Igual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BTN_Dividir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTFCalc)
-                .addContainerGap())
+                .addGap(14, 14, 14))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addContainerGap()
                 .addComponent(jTFCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTN_Voltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTN_CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -364,7 +364,7 @@ public class Visual extends javax.swing.JFrame {
                     .addComponent(BTN_Ponto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTN_Igual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTN_Dividir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         pack();
@@ -422,41 +422,46 @@ public class Visual extends javax.swing.JFrame {
     private void BTN_IgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_IgualActionPerformed
         // TODO add your handling code here:
 // Obtém o segundo número da caixa de texto
-        num2 = Double.parseDouble(jTFCalc.getText());
+        try {
+// Obtém o segundo número da caixa de texto
+            num2 = Double.parseDouble(jTFCalc.getText());
 
-// Variável para armazenar o resultado da operação
-        double resultado;
+            // Variável para armazenar o resultado da operação
+            double resultado;
 
 // Verifica qual operação foi selecionada
-        switch (contas) {
-            case "+": // Se a operação for soma
-                resultado = num1 + num2; // Soma os dois números
-                break;
+            switch (contas) {
+                case "+": // Se a operação for soma
+                    resultado = num1 + num2; // Soma os dois números
+                    break;
 
-            case "-": // Se a operação for subtração
-                resultado = num1 - num2; // Subtrai o segundo número do primeiro
-                break;
+                case "-": // Se a operação for subtração
+                    resultado = num1 - num2; // Subtrai o segundo número do primeiro
+                    break;
 
-            case "*": // Se a operação for multiplicação
-                resultado = num1 * num2; // Multiplica os dois números
-                break;
+                case "*": // Se a operação for multiplicação
+                    resultado = num1 * num2; // Multiplica os dois números
+                    break;
 
-            case "/": // Se a operação for divisão
-                if (num2 != 0) { // Verifica se o divisor não é zero
-                    resultado = num1 / num2; // Divide o primeiro número pelo segundo
-                } else {
-// Se o divisor for zero, exibe uma mensagem de erro
+                case "/": // Se a operação for divisão
+                    if (num2 != 0) { // Verifica se o divisor não é zero
+                        resultado = num1 / num2; // Divide o primeiro número pelo segundo
+                    } else {
+                        // Se o divisor for zero, exibe uma mensagem de erro
+                        jTFCalc.setText("ERRO");
+                        return; // Sai do método para evitar continuar com a operação
+                    }
+                    break;
+
+                default: // Caso não haja uma operação válida
                     jTFCalc.setText("ERRO");
-                    return; // Sai do método para evitar continuar com a operação
-                }
-                break;
-
-            default: // Caso não haja uma operação válida
-                jTFCalc.setText("ERRO");
-                return; // Sai do método
+                    return; // Sai do método
+            }
+            // Exibe o resultado na caixa de texto
+            jTFCalc.setText(String.valueOf(resultado));
+        } catch (NumberFormatException e) {
+            jTFCalc.setText("ERRO");
         }
-        // Exibe o resultado na caixa de texto
-        jTFCalc.setText(String.valueOf(resultado));
     }//GEN-LAST:event_BTN_IgualActionPerformed
 
     private void jTFCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCalcActionPerformed

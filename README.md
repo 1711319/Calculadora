@@ -14,7 +14,13 @@ Java JDK: Versão 23 ou mais recente.
 
 🚀 Passos para Instalação e Execução Clone ou baixe este repositório:
 
-bash git clone https://github.com/1711319/Calculadora.git Abra o NetBeans IDE e importe o projeto:
+---------------------------------------------------------------------------
+|                                                                         |
+| bash git clone https://github.com/1711319/Calculadora.git |             |
+|                                                                         |
+---------------------------------------------------------------------------
+
+Abra o NetBeans IDE e importe o projeto:
 
 Clique em Arquivo -> Abrir Projeto e selecione a pasta baixada.
 
@@ -47,7 +53,7 @@ Saída: Resultado = 45.
 
 Entrada: Número 1 = 8, Número 2 = 0, Operação = /.
 
-Saída: "Erro: Divisão por zero não permitida."
+Saída: "Erro"
 
 👨‍💻 Desenvolvedor Criado e desenvolvido por Rodrigo Henriques como parte de um trabalho escolar. Este projeto reflete o compromisso com o aprendizado e a inovação!
 

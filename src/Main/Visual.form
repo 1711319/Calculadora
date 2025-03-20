@@ -10,6 +10,7 @@
     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="ff" green="ff" id="white" palette="1" red="ff" type="palette"/>
     </Property>
+    <Property name="undecorated" type="boolean" value="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[335, 505]"/>
     </Property>
@@ -34,8 +35,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+          <Component id="jTFCalc" alignment="0" pref="306" max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="BTN_Voltar" min="-2" max="-2" attributes="0"/>
@@ -83,21 +85,16 @@
                       <Component id="BTN_Dividir" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTFCalc" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="jTFCalc" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="BTN_Voltar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BTN_CE" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -132,7 +129,7 @@
                   <Component id="BTN_Igual" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="BTN_Dividir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace pref="49" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
