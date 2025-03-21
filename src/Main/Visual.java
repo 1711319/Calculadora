@@ -4,6 +4,7 @@
  */
 package Main;
 
+import javax.swing.JOptionPane;
 import java.awt.Color;
 
 /**
@@ -57,17 +58,17 @@ public class Visual extends javax.swing.JFrame {
         BTN_Ponto = new javax.swing.JButton();
         BTN_NumeroSete = new javax.swing.JButton();
         BTN_Igual = new javax.swing.JButton();
+        jTBTN_OnOFF = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora");
         setBackground(new java.awt.Color(102, 102, 102));
         setForeground(java.awt.Color.white);
-        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(335, 505));
         setResizable(false);
 
         BTN_NumeroCinco.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroCinco.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroCinco.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroCinco.setText("5");
         BTN_NumeroCinco.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroCinco.addActionListener(new java.awt.event.ActionListener() {
@@ -77,7 +78,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Dividir.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Dividir.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Dividir.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Dividir.setText("/");
         BTN_Dividir.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Dividir.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +88,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroSeis.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroSeis.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroSeis.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroSeis.setText("6");
         BTN_NumeroSeis.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroSeis.addActionListener(new java.awt.event.ActionListener() {
@@ -97,7 +98,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Subtracao.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Subtracao.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Subtracao.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Subtracao.setText("-");
         BTN_Subtracao.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Subtracao.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +108,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroQuatro.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroQuatro.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroQuatro.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroQuatro.setText("4");
         BTN_NumeroQuatro.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroQuatro.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +118,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroUm.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroUm.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroUm.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroUm.setText("1");
         BTN_NumeroUm.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroUm.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +128,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroDois.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroDois.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroDois.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroDois.setText("2");
         BTN_NumeroDois.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroDois.addActionListener(new java.awt.event.ActionListener() {
@@ -137,7 +138,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroTres.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroTres.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroTres.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroTres.setText("3");
         BTN_NumeroTres.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroTres.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +148,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Multiplicar.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Multiplicar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Multiplicar.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Multiplicar.setText("X");
         BTN_Multiplicar.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Multiplicar.addActionListener(new java.awt.event.ActionListener() {
@@ -157,7 +158,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroZero.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroZero.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroZero.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroZero.setText("0");
         BTN_NumeroZero.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroZero.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +168,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         jTFCalc.setBackground(new java.awt.Color(255, 204, 51));
-        jTFCalc.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
+        jTFCalc.setFont(new java.awt.Font("Digital-7", 0, 48)); // NOI18N
         jTFCalc.setForeground(new java.awt.Color(0, 0, 0));
         jTFCalc.setToolTipText("");
         jTFCalc.setAlignmentX(20.0F);
@@ -180,7 +181,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Voltar.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Voltar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Voltar.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Voltar.setText("←");
         BTN_Voltar.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Voltar.addActionListener(new java.awt.event.ActionListener() {
@@ -190,7 +191,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_CE.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_CE.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_CE.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_CE.setText("CE");
         BTN_CE.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_CE.addActionListener(new java.awt.event.ActionListener() {
@@ -200,7 +201,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Clear.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Clear.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Clear.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Clear.setText("C");
         BTN_Clear.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Clear.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +211,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_InverterSinal.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_InverterSinal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_InverterSinal.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_InverterSinal.setText("±");
         BTN_InverterSinal.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_InverterSinal.addActionListener(new java.awt.event.ActionListener() {
@@ -220,7 +221,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroOito.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroOito.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroOito.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroOito.setText("8");
         BTN_NumeroOito.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroOito.addActionListener(new java.awt.event.ActionListener() {
@@ -230,7 +231,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroNove.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroNove.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroNove.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroNove.setText("9");
         BTN_NumeroNove.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroNove.addActionListener(new java.awt.event.ActionListener() {
@@ -240,7 +241,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Mais.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Mais.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Mais.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Mais.setText("+");
         BTN_Mais.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Mais.addActionListener(new java.awt.event.ActionListener() {
@@ -250,7 +251,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Ponto.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Ponto.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Ponto.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Ponto.setText(".");
         BTN_Ponto.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Ponto.addActionListener(new java.awt.event.ActionListener() {
@@ -260,7 +261,7 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_NumeroSete.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_NumeroSete.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_NumeroSete.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_NumeroSete.setText("7");
         BTN_NumeroSete.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_NumeroSete.addActionListener(new java.awt.event.ActionListener() {
@@ -270,12 +271,22 @@ public class Visual extends javax.swing.JFrame {
         });
 
         BTN_Igual.setBackground(new java.awt.Color(51, 51, 51));
-        BTN_Igual.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        BTN_Igual.setFont(new java.awt.Font("DialogInput", 0, 24)); // NOI18N
         BTN_Igual.setText("=");
         BTN_Igual.setPreferredSize(new java.awt.Dimension(65, 65));
         BTN_Igual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTN_IgualActionPerformed(evt);
+            }
+        });
+
+        jTBTN_OnOFF.setBackground(new java.awt.Color(0, 0, 0));
+        jTBTN_OnOFF.setFont(new java.awt.Font("EuroStyle", 0, 18)); // NOI18N
+        jTBTN_OnOFF.setForeground(new java.awt.Color(204, 255, 204));
+        jTBTN_OnOFF.setText("Ligar | Desligar");
+        jTBTN_OnOFF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTBTN_OnOFFActionPerformed(evt);
             }
         });
 
@@ -287,47 +298,52 @@ public class Visual extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BTN_Voltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_Clear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_InverterSinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BTN_NumeroSete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_NumeroOito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_NumeroNove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_Mais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BTN_NumeroQuatro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_NumeroCinco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_NumeroSeis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_Subtracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BTN_NumeroUm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_NumeroDois, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_NumeroTres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_Multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(BTN_NumeroZero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_Ponto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_Igual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTN_Dividir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(14, 14, 14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(BTN_Voltar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_CE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_Clear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_InverterSinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(BTN_NumeroSete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_NumeroOito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_NumeroNove, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_Mais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(BTN_NumeroQuatro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_NumeroCinco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_NumeroSeis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_Subtracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(BTN_NumeroUm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_NumeroDois, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_NumeroTres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_Multiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(BTN_NumeroZero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_Ponto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_Igual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BTN_Dividir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(14, 14, 14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jTBTN_OnOFF)
+                        .addGap(95, 95, 95))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -364,7 +380,9 @@ public class Visual extends javax.swing.JFrame {
                     .addComponent(BTN_Ponto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTN_Igual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTN_Dividir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTBTN_OnOFF)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
@@ -562,6 +580,62 @@ public class Visual extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BTN_PontoActionPerformed
 
+    private void jTBTN_OnOFFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTBTN_OnOFFActionPerformed
+        // TODO add your handling code here:
+        if (jTBTN_OnOFF.isSelected()) {
+// Desliga a calculadora
+// Desativa todos botões
+            BTN_Mais.setEnabled(false);
+            BTN_Subtracao.setEnabled(false);
+            BTN_Multiplicar.setEnabled(false);
+            BTN_Dividir.setEnabled(false);
+            BTN_Igual.setEnabled(false);
+            BTN_InverterSinal.setEnabled(false);
+            BTN_NumeroUm.setEnabled(false);
+            BTN_NumeroDois.setEnabled(false);
+            BTN_NumeroTres.setEnabled(false);
+            BTN_NumeroQuatro.setEnabled(false);
+            BTN_NumeroCinco.setEnabled(false);
+            BTN_NumeroSeis.setEnabled(false);
+            BTN_NumeroSete.setEnabled(false);
+            BTN_NumeroOito.setEnabled(false);
+            BTN_NumeroNove.setEnabled(false);
+            BTN_NumeroZero.setEnabled(false);
+            BTN_Ponto.setEnabled(false);
+            BTN_CE.setEnabled(false);
+            BTN_Clear.setEnabled(false);
+            BTN_Voltar.setEnabled(false);
+// Exibe mensagem de que a calculadora está desligada
+            jTFCalc.setText("");
+            JOptionPane.showMessageDialog(this, "Calculadora Desligada");
+        } else {
+// Liga a calculadora
+// Ativa todos os botões 
+                BTN_Mais.setEnabled(true);
+                BTN_Subtracao.setEnabled(true);
+                BTN_Multiplicar.setEnabled(true);
+                BTN_Dividir.setEnabled(true);
+                BTN_Igual.setEnabled(true);
+                BTN_InverterSinal.setEnabled(true);
+                BTN_NumeroUm.setEnabled(true);
+                BTN_NumeroDois.setEnabled(true);
+                BTN_NumeroTres.setEnabled(true);
+                BTN_NumeroQuatro.setEnabled(true);
+                BTN_NumeroCinco.setEnabled(true);
+                BTN_NumeroSeis.setEnabled(true);
+                BTN_NumeroSete.setEnabled(true);
+                BTN_NumeroOito.setEnabled(true);
+                BTN_NumeroNove.setEnabled(true);
+                BTN_NumeroZero.setEnabled(true);
+                BTN_Ponto.setEnabled(true);
+                BTN_CE.setEnabled(true);
+                BTN_Clear.setEnabled(true);
+                BTN_Voltar.setEnabled(true);
+// exibe mensagem de que a calculadora está ligada
+                JOptionPane.showMessageDialog(this, "Calculadora Ligada");
+        }
+    }//GEN-LAST:event_jTBTN_OnOFFActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -618,6 +692,7 @@ public class Visual extends javax.swing.JFrame {
     private javax.swing.JButton BTN_Ponto;
     private javax.swing.JButton BTN_Subtracao;
     private javax.swing.JButton BTN_Voltar;
+    private javax.swing.JToggleButton jTBTN_OnOFF;
     private javax.swing.JTextField jTFCalc;
     // End of variables declaration//GEN-END:variables
 }
